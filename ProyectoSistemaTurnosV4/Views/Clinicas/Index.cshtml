@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ProyectoSistemaTurnosV4.Models.Clinica>
+@{
+    ViewData["Title"] = "Clínicas";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<h1 class="h3 mb-3">Clínicas</h1>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Activa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Id</td>
+                <td>@c.Nombre</td>
+                <td>@(c.Activa ? "Sí" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>

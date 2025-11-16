@@ -1,0 +1,128 @@
+﻿@model ProyectoSistemaTurnosV4.Models.ViewModels.PacienteBusquedaVm
+@{
+    ViewData["Title"] = "Buscar pacientes";
+}
+
+<h1 class="h3 mb-3">Buscar pacientes</h1>
+
+<form id="frmBusq" class="card shadow-sm mb-4">
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">DPI</label>
+                <input name="Dpi" class="form-control" maxlength="25" />
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Nombre / Apellido</label>
+                <input name="Nombre" class="form-control" maxlength="80" placeholder="Ej: Juan Pérez" />
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">No. Carné</label>
+                <input name="Carne" class="form-control" maxlength="25" />
+            </div>
+        </div>
+
+        <div class="d-flex gap-2 mt-3">
+            <button id="btnBuscar" type="submit" class="btn btn-primary" disabled>Buscar</button>
+            <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+
+            <div class="ms-auto">
+                <a class="btn btn-success" asp-controller="Pacientes" asp-action="Create">
+                    Agregar nuevo paciente
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- 📋 Resultados de búsqueda -->
+<div id="resultados"></div>
+
+@section Scripts {
+<script>
+(function(){
+    const form = document.getElementById("frmBusq");
+    const btnBuscar = document.getElementById("btnBuscar");
+    const inputs = form.querySelectorAll("input");
+    const contenedor = document.getElementById("resultados");
+
+    // ✅ Habilita el botón solo si hay texto en algún campo
+    const toggle = () => {
+        const hasValue = Array.from(inputs).some(i => i.value.trim().length > 0);
+        btnBuscar.disabled = !hasValue;
+    };
+    inputs.forEach(i => i.addEventListener("input", toggle));
+    toggle();
+
+    // 🚀 Enviar formulario sin recargar
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        btnBuscar.disabled = true;
+        btnBuscar.textContent = "Buscando...";
+
+        const params = new URLSearchParams(new FormData(form)).toString();
+        const url = `/api/pacientes?${params}`;
+
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error("Error en la consulta");
+            const data = await res.json();
+
+            if (data.length === 0) {
+                contenedor.innerHTML = `
+                    <div class="alert alert-warning mt-3">
+                        No se encontraron pacientes con los datos ingresados.
+                    </div>`;
+            } else {
+                let html = `
+                    <div class="card shadow-sm mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Resultados (${data.length})</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped align-middle" id="tblPacientes">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombres</th>
+                                            <th>Apellidos</th>
+                                            <th>DPI</th>
+                                            <th>Carné</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`;
+                data.forEach(p => {
+                    html += `
+                        <tr>
+                            <td>${p.id}</td>
+                            <td>${p.nombres}</td>
+                            <td>${p.apellidos}</td>
+                            <td>${p.documento ?? ""}</td>
+                            <td>${p.carne ?? ""}</td>
+                            <td>
+                                <a href="/Triage/Upsert?pacienteId=${p.id}" class="btn btn-sm btn-outline-primary">
+                                Modificar triaje
+                                </a>
+                            </td>
+                        </tr>`;
+                });
+                html += `
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>`;
+                contenedor.innerHTML = html;
+            }
+        } catch (err) {
+            contenedor.innerHTML = `
+                <div class="alert alert-danger mt-3">
+                    Error al obtener los pacientes: ${err.message}
+                </div>`;
+        } finally {
+            btnBuscar.disabled = false;
+            btnBuscar.textContent = "Buscar";
+        }
+    });
+})();
+</script>
+}

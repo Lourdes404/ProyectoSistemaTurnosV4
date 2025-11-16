@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Turno>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="btn-group">
+        <a asp-controller="Turnos" asp-action="Index" class="btn btn-primary">Turnos de hoy</a>
+        <a asp-controller="Turnos" asp-action="Historial" class="btn btn-outline-secondary">Ver historial</a>
+    </div>
+    <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalNuevo">Agregar turno</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ticket</th>
+            <th>Paciente</th>
+            <th>Clínica</th>
+            <th>Estado</th>
+            <th>Creado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.TicketPublico</td>
+                <td>@t.Paciente?.Nombres @t.Paciente?.Apellidos</td>
+                <td>@t.Clinica?.Nombre</td>
+                <td>@t.Estado</td>
+                <td>@t.CreadoEn.ToString("HH:mm")</td>
+                <td class="text-nowrap">
+                    <form method="post" action="/api/turnos/@t.Id/llamar" class="d-inline" data-fetch>
+                        <button class="btn btn-sm btn-warning">Llamar</button>
+                    </form>
+                    <form method="post" action="/api/turnos/@t.Id/finalizar" class="d-inline" data-fetch>
+                        <button class="btn btn-sm btn-success">Finalizar</button>
+                    </form>
+                    <form method="post" action="/api/turnos/@t.Id/ausente" class="d-inline" data-fetch>
+                        <button class="btn btn-sm btn-secondary">Ausente</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal rápido para crear turno -->
+<div class="modal fade" id="modalNuevo" tabindex="-1">
+    <div class="modal-dialog">
+        <form id="formNuevo" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nuevo turno</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <label class="form-label">PacienteId</label>
+                    <input class="form-control" name="pacienteId" required>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Clínica</label>
+                    <select class="form-select" name="clinicaId">
+                        @foreach (var c in (IEnumerable<Clinica>)ViewBag.Clinicas)
+                        {
+                            <option value="@c.Id">@c.Nombre</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnCrear">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('form[data-fetch]').forEach(f=>{
+          f.addEventListener('submit', async e=>{
+            e.preventDefault();
+            await fetch(f.action, { method:'PUT' }); // los PUT del API
+            location.reload();
+          });
+        });
+
+        document.getElementById('formNuevo')?.addEventListener('submit', async e=>{
+          e.preventDefault();
+          const fd = new FormData(e.target);
+          const body = JSON.stringify({
+            pacienteId: parseInt(fd.get('pacienteId')),
+            clinicaId: parseInt(fd.get('clinicaId'))
+          });
+          await fetch('/api/turnos', { method:'POST', headers:{'Content-Type':'application/json'}, body});
+          location.reload();
+        });
+    </script>
+}

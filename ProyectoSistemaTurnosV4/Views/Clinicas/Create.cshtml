@@ -1,0 +1,25 @@
+﻿@model ProyectoSistemaTurnosV4.Models.Clinica
+@{
+    ViewData["Title"] = "Crear clínica";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<h1>Crear clínica</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-check mb-3">
+        <input asp-for="Activa" class="form-check-input" />
+        <label asp-for="Activa" class="form-check-label"></label>
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index", "Clinicas")">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

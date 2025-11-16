@@ -1,0 +1,188 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\controllers\\api\\turnosapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\controllers\\api\\turnosapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\controllers\\triagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\controllers\\triagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\controllers\\turnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\controllers\\turnoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\models\\turnoevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\models\\turnoevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|c:\\users\\adria\\documents\\proyectos de estudio\\proyectosistematurnosv4\\proyectosistematurnosv4\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D86706-2E7A-27BB-342C-618B999EA636}|ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4.csproj|solutionrelative:proyectosistematurnosv4\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 400,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 53,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TurnoEvento.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Models\\TurnoEvento.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Models\\TurnoEvento.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Models\\TurnoEvento.cs",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Models\\TurnoEvento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T04:37:47.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T04:29:14.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 187,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TurnosApiController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\Api\\TurnosApiController.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Controllers\\Api\\TurnosApiController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\Api\\TurnosApiController.cs",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Controllers\\Api\\TurnosApiController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAcwHUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T04:39:32.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TriageController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\TriageController.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Controllers\\TriageController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\TriageController.cs",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Controllers\\TriageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T04:38:03.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\appsettings.json",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\appsettings.json",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\appsettings.json",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\appsettings.json",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-16T03:59:10.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T03:58:26.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T03:58:13.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TurnosController.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\TurnosController.cs",
+              "RelativeDocumentMoniker": "ProyectoSistemaTurnosV4\\Controllers\\TurnosController.cs",
+              "ToolTip": "C:\\Users\\adria\\Documents\\PROYECTOS DE ESTUDIO\\ProyectoSistemaTurnosV4\\ProyectoSistemaTurnosV4\\Controllers\\TurnosController.cs",
+              "RelativeToolTip": "ProyectoSistemaTurnosV4\\Controllers\\TurnosController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvx0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T03:57:52.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

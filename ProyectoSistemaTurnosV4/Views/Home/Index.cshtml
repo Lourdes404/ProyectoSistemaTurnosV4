@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<h1 class="h3">Bienvenida, Lou</h1>
+<p class="text-muted">Selecciona un módulo en el menú para comenzar.</p>
+
+<div class="row g-3">
+    <div class="col-md-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Clínicas</h5>
+                <p class="card-text">Administra las áreas de atención.</p>
+                <a class="btn btn-primary" asp-controller="Clinicas" asp-action="Index">Abrir</a>
+            </div>
+        </div>
+    </div>
+    <!-- agrega más tarjetas si quieres -->
+</div>

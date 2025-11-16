@@ -1,0 +1,110 @@
+﻿@{
+    var currentController = (string)ViewContext.RouteData.Values["controller"]!;
+    var currentAction = (string)ViewContext.RouteData.Values["action"]!;
+}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Sistema de Turnos</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .sidebar {
+            min-width: 240px;
+            max-width: 260px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sidebar a.nav-link {
+            pointer-events: auto;
+            cursor: pointer;
+        }
+        .sidebar .nav-link.active {
+            background: #0d6efd; color: #fff;
+        }
+        .app-wrapper { min-height: 100vh; }
+        .topbar { height: 56px; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Topbar -->
+    <nav class="navbar navbar-dark bg-dark topbar px-3">
+        <a class="navbar-brand" href="/">Sistema de Turnos</a>
+        <div class="ms-auto text-white-50">
+            LOU ▸ <a class="text-decoration-none text-white" href="/Auth/Login">Cerrar sesión</a>
+            <a class="ms-auto text-white-50" asp-controller="Usuarios" asp-action="Crear">
+                👤 Crear usuario
+            </a>
+        </div>
+        
+    </nav>
+
+    <!-- Layout con Sidebar + Contenido -->
+    <div class="container-fluid app-wrapper">
+        <div class="row flex-nowrap">
+            <!-- Sidebar -->
+            <aside class="col-auto col-md-3 col-xl-2 px-0 bg-white border-end sidebar">
+                <div class="d-flex flex-column pt-3">
+                    <a class="navbar-brand px-3 mb-3 fw-bold" href="/">Menú</a>
+                    <ul class="nav nav-pills flex-column mb-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link @(currentController == "Home" ? "active" : "")" href="/">
+                                🏠 Inicio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link @(currentController == "Clinicas" ? "active" : "")" asp-controller="Clinicas" asp-action="Index">
+                                👩‍⚕️ Clínicas
+                            </a>
+                        </li>
+
+                       
+
+                        <li>
+                            <a class="nav-link @(currentController == "PacientesController" && currentAction == "Buscar" ? "active" : "")"
+                               href="@Url.Action("Buscar", "Pacientes")">
+                                🔎 Buscar pacientes
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a class="nav-link @(currentController == "Turnos" ? "active" : "")" asp-controller="Turnos" asp-action="Index">
+                                ⏱️ Turnos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link @(currentController == "Reportes" ? "active" : "")" asp-controller="Reportes" asp-action="Index">
+                                📊 Reportes
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="mt-auto p-3 small text-muted">
+                        © @DateTime.Now.Year UMG Guatemala
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Contenido -->
+            <main class="col py-3">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen_final_desarrollo_web", "..\Examen_final_desarrollo_web\Examen_final_desarrollo_web\Examen_final_desarrollo_web.csproj", "{4E8FCD4B-034F-0955-B22F-D9A45295B91D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSistemaTurnosV4", "ProyectoSistemaTurnosV4\ProyectoSistemaTurnosV4.csproj", "{63D86706-2E7A-27BB-342C-618B999EA636}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E8FCD4B-034F-0955-B22F-D9A45295B91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8FCD4B-034F-0955-B22F-D9A45295B91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8FCD4B-034F-0955-B22F-D9A45295B91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8FCD4B-034F-0955-B22F-D9A45295B91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D86706-2E7A-27BB-342C-618B999EA636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D86706-2E7A-27BB-342C-618B999EA636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D86706-2E7A-27BB-342C-618B999EA636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D86706-2E7A-27BB-342C-618B999EA636}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EFEE79A-65FF-46FF-9A4B-565C647FC00C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Turno>
+@{
+    var fecha = (DateTime)ViewBag.Fecha;
+}
+
+<div class="d-flex justify-content-between mb-3">
+    <form class="d-flex" method="get">
+        <input type="date" name="fecha" class="form-control" value="@fecha.ToString("yyyy-MM-dd")" />
+        <button class="btn btn-outline-primary ms-2">Filtrar</button>
+    </form>
+    <a asp-action="Index" class="btn btn-secondary">Volver a hoy</a>
+</div>
+
+<table class="table table-sm table-striped">
+    <thead><tr><th>Fecha</th><th>Ticket</th><th>Paciente</th><th>Clínica</th><th>Estado</th></tr></thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.CreadoEn.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@t.TicketPublico</td>
+                <td>@t.Paciente?.Nombres @t.Paciente?.Apellidos</td>
+                <td>@t.Clinica?.Nombre</td>
+                <td>@t.Estado</td>
+            </tr>
+        }
+    </tbody>
+</table>

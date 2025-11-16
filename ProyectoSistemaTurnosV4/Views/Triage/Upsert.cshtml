@@ -1,0 +1,78 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@model ProyectoSistemaTurnosV4.Models.Triage
+@{
+    var paciente = (ProyectoSistemaTurnosV4.Models.Paciente)ViewBag.Paciente;
+    var clinicas = (IEnumerable<ProyectoSistemaTurnosV4.Models.Clinica>)ViewBag.Clinicas;
+}
+
+<h1 class="h4 mb-3">Triage de @paciente.Nombres @paciente.Apellidos</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">The Pac
+        <!-- ✅ IMPORTANTE: asp-action/asp-controller y resumen de validación -->
+        <form asp-controller="Triage" asp-action="Upsert" method="post">
+            @Html.AntiForgeryToken()
+
+            <!-- ✅ Muestra TODOS los errores de validación/servidor -->
+            <div asp-validation-summary="All" class="alert alert-danger" role="alert"></div>
+
+            <input  asp-for="Id" />
+            <input  asp-for="PacienteId" value="@paciente.Id" />
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Clínica destino</label>
+                    <select asp-for="ClinicaDestinoId" class="form-select"
+                            asp-items="@(new SelectList(clinicas, "Id", "Nombre"))"></select>
+                    <span asp-validation-for="ClinicaDestinoId" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="NivelPrioridad" class="form-label">Prioridad</label>
+                    <select asp-for="NivelPrioridad" class="form-select">
+                        <option>Alta</option>
+                        <option>Media</option>
+                        <option>Baja</option>
+                    </select>
+                    <span asp-validation-for="NivelPrioridad" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="FechaRegistro" class="form-label">Fecha</label>
+                    <!-- ✅ Fecha en formato que model binder entiende -->
+                    <input asp-for="FechaRegistro" type="datetime-local"
+                           value="@Model.FechaRegistro.ToString("yyyy-MM-ddTHH:mm")"
+                           class="form-control" />
+                    <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <label asp-for="MotivoConsulta" class="form-label"></label>
+                    <input asp-for="MotivoConsulta" class="form-control" />
+                    <span asp-validation-for="MotivoConsulta" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <label asp-for="Sintomas" class="form-label"></label>
+                    <textarea asp-for="Sintomas" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Sintomas" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <label asp-for="SignosVitales" class="form-label"></label>
+                    <input asp-for="SignosVitales" class="form-control" placeholder="TA/FC/FR/Temp/SpO₂" />
+                    <span asp-validation-for="SignosVitales" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mt-3 d-flex gap-2">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a asp-controller="Pacientes" asp-action="Buscar" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
